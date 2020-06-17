@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hitokoto</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  
+  <body>
+    <header>
+      <h1><%= link_to("ひとこと伝言板", "/") %></h1>
+      <ul>
+        <li>
+          <%= link_to("伝言を残そう", "/tweets") %>
+        </li>
+        <li>
+          <%= link_to("お問い合わせ", "/contacts") %>
+        </li>
+      </ul>
+    </header>
+    <%= yield %>
+  </body>
+</html>
